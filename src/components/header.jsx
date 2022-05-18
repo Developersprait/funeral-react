@@ -1,53 +1,34 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import Modal from './Modal';
+import {useState} from 'react';
 
 
-const header = () => {
+const Header = () => {
+    const [state] = useState({
+        phone: '+375333901056', 
+        email: 'doctorsprait@gmail.com',
+        button: 'Бесплатная консультация'});
   return (
+    
     <header className="header">
-        <div className="header__top">
-            <div className="container">
+        <div className="container">
+            <div className="header__top">
                 <div className="header__contacts">
-                    <a className="header__phone" href="tel:+375333901056">+375(33)390 10 56</a>
-                    <a className="header__email" href="mailto:doctorsprait@gmail.com">Doctorsprait@gmail.com</a>
-                    <a data-fancybox data-src="#modal" href="javascript:;" className="header__btn">Бесплатная
-                        консультация</a>
-                </div>
-            </div>
-        </div>
-        <div className="header__content">
-            <div className="container">
-                <div className="header__content-inner">
-                    <div className="header__logo">
-                        <a href="viber://chat?number=%2B375333901056">
-                            <img src="img/viber.png" alt="Брест похороны, ритуальный магазин Брест, Ритуальные услуги"/>
-                        </a>
-                        <a href="tg://resolve?domain=doctorsprait">
-                            <img src="img/telegram.png"
-                                alt="Брест похороны, ритуальный магазин Брест, Ритуальные услуги"/></a>
-                        <a href="whatsapp://send/?phone=375333901056">
-                            <img src="img/watsap.png" alt="Брест похороны, ритуальный магазин Брест, Ритуальные услуги"/>
-                        </a>
+                    <div className="header__phone">
+                        <div className="header__phone-img"></div>   
+                        <a href="tel:+375333901056" className="header__phone-link">{state.phone}</a>
                     </div>
-                    <nav className="menu">
-                        <div className="header__btn-menu">
-                            <span className="icon-bars"></span>
-                        </div>
-                        <ul>
-                            <li><a href="#">Главная</a></li>
-                            <li><a data-fancybox data-src="#modal__header-menu" href="javascript:;" className="menu a"
-                                    >О компании</a></li>
-                            <li><a data-fancybox data-src="#modal__header-uslugi" href="javascript:;" className="menu a"
-                                    >Услуги</a></li>
-                            <li><a data-fancybox data-src="#modal__header-contacts" href="javascript:;" className="menu a"
-                                    >Контакты</a></li>
-                        </ul>
-                    </nav>
+                    <div className="header__email">
+                        <div className="header__email-img"></div>
+                        <a href="mailto:doctorsprait@gmail.com" className="header__email-link">{state.email}</a>
+                    </div>
                 </div>
+                <Modal/>
             </div>
+            <div className="header__content"></div>
         </div>
     </header>
   );
 }
 
-export default header
+export default Header

@@ -1,4 +1,23 @@
+@import '_vars'
 *
     margin: 0
     padding: 0
     box-sizing: border-box
+
+.container
+    max-width: 1170px
+    margin: 0 auto
+    padding: 0 15px
+.button
+    margin: 0
+    font-family: $roboto
+    color: #1b1b1b
+    background-color: #ffc222
+    padding: 5px 20px 
+    font-size: 16px
+    border: none
+.button:hover
+    cursor: pointer    
+@media screen and ( max-width: 364px )
+    .button
+        font-size: 12px    

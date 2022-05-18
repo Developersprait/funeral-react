@@ -1,0 +1,61 @@
+@import '../_vars'
+.header
+    width: 100%
+    background-color: #303030
+    &__top
+        display: flex
+        justify-content: space-between
+        height: 45px
+    &__contacts
+        display: flex
+        align-items: center
+        justify-items: center
+    &__phone
+        display: flex
+        margin-right: 20px
+        &-img
+            @include img('./img/phone.png', 20px, 20px)
+            margin-right: 10px
+        &-link
+            color: #cbcacb    
+            font-family: $roboto
+            font-size: 14px
+            letter-spacing: 0.25px
+            text-decoration: none
+    &__email
+        display: flex
+        &-img
+            @include img('./img/mail.png', 20px, 20px)
+            margin-right: 10px
+        &-link
+            color: #cbcacb    
+            font-family: $roboto
+            font-size: 14px
+            letter-spacing: 0.25px
+            text-decoration: none
+@media screen and ( max-width: 620px )
+    .header
+        &__top
+            display: block
+            height: 64px
+            text-align: center
+        &__contacts
+            height: 35px    
+            width: 350px
+            margin: 0 auto
+@media screen and ( max-width: 364px )
+    .header
+        &__top
+            height: 59px
+        &__contacts
+            width: 280px
+        &__phone
+            margin-right: 15px    
+        &__phone-img,
+        &__email-img
+            margin-right: 3px
+        &__phone-link,
+        &__email-link
+            font-size: 11px   
+            margin-top: 4px 
+
