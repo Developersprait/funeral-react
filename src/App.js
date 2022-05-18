@@ -1,9 +1,11 @@
-
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import header from './components/header';
 
 function App() {
   return (
-    <div className="App">
-      <h1>hello react</h1>
+    <div>
+      <header/>
     </div>
   );
 }
