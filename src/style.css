@@ -176,4 +176,55 @@
     font-size: 11px;
     margin-top: 4px;
   }
+}
+.menu__box {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+.menu__socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu__telegram-img {
+  background: url("./img/telegram.png");
+  width: 25px;
+  height: 25px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-right: 30px;
+}
+.menu__viber-img {
+  background: url("./img/viber.png");
+  width: 25px;
+  height: 25px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.menu__btn {
+  display: none;
+}
+.menu__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.menu__list li {
+  display: inline-block;
+}
+.menu__list button {
+  color: #323232;
+  font-size: 16px;
+  line-height: 40px;
+  border: 1px solid transparent;
+  padding: 0px 16px;
+  transition: all 0.3s;
+  background: #fff;
+  margin-left: 10px;
+}
+.menu__list button:hover {
+  border-color: #323232;
 }/*# sourceMappingURL=style.css.map */

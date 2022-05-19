@@ -2,9 +2,10 @@ import React from 'react'
 import {useState} from 'react'
 
 const Menu = () => {
-    const [state] = useState({
-        link1: '1', 
-        link2: '2',
+    const [state] = useState({ 
+        about: 'О нас',
+        services: 'Услуги',
+        contacts: 'Контакты'
       });
   return (
     <div className="menu">
@@ -12,13 +13,13 @@ const Menu = () => {
             <div className="menu__box">
                 <div className="menu__socials">
                     <div className="menu__telegram">
-                        <a href="tg://resolve?domain=kalziferr"className='menu__telegram-link'>
-                            <div className="menu__telegram-img">{state.link1}</div>
+                        <a href="tg://resolve?domain=kalziferr"className='menu__telegram-link' target="_blank">
+                            <div className="menu__telegram-img"></div>
                         </a>
                     </div>
                     <div className="menu__viber">
-                        <a href="viber://chat?number=%2B375333901056" className="menu__viber-link">
-                            <div className="menu__viber-img">{state.link2}</div>
+                        <a href="viber://chat?number=%2B375333901056" className="menu__viber-link" target="_blank">
+                            <div className="menu__viber-img"></div>
                         </a>
                     </div>
                 </div>
@@ -27,10 +28,9 @@ const Menu = () => {
                     ☰
                     </div>
                     <ul className="menu__list">
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                        <li><button className="menu__button">{state.about}</button></li>
+                        <li><button className="menu__button">{state.services}</button></li>
+                        <li><button className="menu__button">{state.contacts}</button></li>
                     </ul>
                 </div>
             </div>
