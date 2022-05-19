@@ -25,7 +25,6 @@ const Header = () => {
                 </div>
                 <Modal/>
             </div>
-            <div className="header__content"></div>
         </div>
     </header>
   );

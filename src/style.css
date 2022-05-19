@@ -113,8 +113,8 @@
 }
 .header__phone-img {
   background: url("./img/phone.png");
-  width: 20px;
-  height: 20px;
+  width: 17px;
+  height: 17px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -132,8 +132,8 @@
 }
 .header__email-img {
   background: url("./img/mail.png");
-  width: 20px;
-  height: 20px;
+  width: 17px;
+  height: 17px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
