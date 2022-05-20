@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import Header from './components/Header';
-import Menu from './components/Menu';
+import Navbar from './components/Navbar';
 
 function App() {
   return (
     <div>
       <Header/>
-      <Menu/>
+      <Navbar/>
     </div>
   );
 }

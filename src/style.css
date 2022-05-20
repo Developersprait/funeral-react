@@ -40,14 +40,21 @@
   align-items: center;
 }
 
-.modal {
+.modal,
+.modal__about,
+.modal__services,
+.modal__contacts {
   width: 300px;
   height: 244px;
   font-size: 14px;
   display: block;
   background: #fff;
+  z-index: 1000;
 }
-.modal__header {
+.modal__header,
+.modal__about__header,
+.modal__services__header,
+.modal__contacts__header {
   width: 100%;
   font-size: 16px;
   font-family: "Roboto", sans-serif;
@@ -56,10 +63,16 @@
   color: #cbcacb;
   padding: 5px;
 }
-.modal__form {
+.modal__form,
+.modal__about__form,
+.modal__services__form,
+.modal__contacts__form {
   padding: 20px;
 }
-.modal__form input {
+.modal__form input,
+.modal__about__form input,
+.modal__services__form input,
+.modal__contacts__form input {
   width: 100%;
   margin-bottom: 20px;
   height: 40px;
@@ -67,19 +80,39 @@
   font-weight: 400;
   padding: 0 20px;
 }
-.modal__form input[type=submit] {
+.modal__form input[type=submit],
+.modal__about__form input[type=submit],
+.modal__services__form input[type=submit],
+.modal__contacts__form input[type=submit] {
   background: #FFC222;
   color: #fff;
   border: none;
 }
-.modal__form input[type=submit]:hover {
+.modal__form input[type=submit]:hover,
+.modal__about__form input[type=submit]:hover,
+.modal__services__form input[type=submit]:hover,
+.modal__contacts__form input[type=submit]:hover {
   opacity: 0.5;
 }
-.modal > .content {
-  width: 100%;
-  padding: 10px 5px;
+.modal a,
+.modal__about a,
+.modal__services a,
+.modal__contacts a {
+  text-decoration: none;
+  color: #000;
 }
-.modal > .close {
+.modal > .content,
+.modal__about > .content,
+.modal__services > .content,
+.modal__contacts > .content {
+  width: 100%;
+  padding: 10px 10px;
+  font-family: "Roboto", sans-serif;
+}
+.modal > .close,
+.modal__about > .close,
+.modal__services > .close,
+.modal__contacts > .close {
   cursor: pointer;
   position: absolute;
   display: block;
@@ -93,6 +126,44 @@
   border: 1px solid #cfcece;
 }
 
+.modal__services {
+  height: auto;
+}
+.modal__services ul {
+  list-style: none;
+}
+
+.modal__contacts {
+  height: 200px;
+}
+
+.contacts__wrp {
+  margin-bottom: 15px;
+  text-align: center;
+}
+.contacts__link {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 25px;
+}
+.contacts__link .menu__telegram-img {
+  margin-right: 0;
+}
+
+@media screen and (max-width: 412px) {
+  .modal__about {
+    width: 270px;
+    height: 261px;
+  }
+
+  .modal__services {
+    width: 278px;
+  }
+
+  .modal__contacts {
+    width: 250px;
+  }
+}
 .header {
   width: 100%;
   background-color: #303030;
@@ -204,6 +275,9 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+.menu__viber-img:hover, .menu__telegram-img:hover {
+  opacity: 0.5;
+}
 .menu__btn {
   display: none;
 }
@@ -213,18 +287,103 @@
   padding: 0;
 }
 .menu__list li {
-  display: inline-block;
+  display: block;
 }
 .menu__list button {
-  color: #323232;
+  color: #FFC222;
   font-size: 16px;
   line-height: 40px;
   border: 1px solid transparent;
   padding: 0px 16px;
   transition: all 0.3s;
-  background: #fff;
+  background: #000;
   margin-left: 10px;
+  margin-bottom: 20px;
 }
 .menu__list button:hover {
-  border-color: #323232;
+  border-color: #cbcacb;
+}
+
+#page-wrap {
+  text-align: center;
+  overflow: auto;
+  top: 45%;
+  position: relative;
+}
+
+.bm-item {
+  display: inline-block;
+  text-decoration: none;
+  margin-bottom: 10px;
+  color: #d1d1d1;
+  transition: color 0.2s;
+}
+.bm-item:hover {
+  color: white;
+}
+
+.bm-burger-button {
+  position: relative;
+  width: 26px;
+  height: 20px;
+  float: right;
+  right: 10%;
+  margin-top: 10px;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #373a47;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #000;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 999 !important;
+}
+
+@media screen and (max-width: 412px) {
+  .menu__btn {
+    display: block;
+    font-size: 26px;
+  }
+  .menu ul {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-top: 15px;
+    z-index: 50;
+  }
+  .menu ul li {
+    width: 100vw;
+  }
 }/*# sourceMappingURL=style.css.map */
