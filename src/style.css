@@ -391,24 +391,16 @@
   }
 }
 .hero {
+  background: url("./img/f1.2.jpg");
+  width: 100%;
+  height: 600px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   overflow: hidden;
 }
 
-.slider-arrow {
-  position: absolute;
-  height: 100%;
-  width: 80%;
-}
-
-.arrow-btn {
-  top: 45%;
-  z-index: 1;
-}
-
-.next {
-  float: right;
-}
-
-.slick-track {
-  height: 204px;
+.slider__title,
+.slider__text {
+  color: #cbcacb;
 }/*# sourceMappingURL=style.css.map */
