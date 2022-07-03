@@ -13,7 +13,7 @@ export default class SimpleSlider extends Component {
       slidesToScroll: 1,
     };
     return (
-      <div>
+      <div className="slider">
         <Slider {...settings}>
           <div>
             <div className="slider__item">

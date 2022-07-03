@@ -1,0 +1,419 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.button {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  color: #1b1b1b;
+  background-color: #ffc222;
+  padding: 5px 20px;
+  font-size: 16px;
+  border: none;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 364px) {
+  .button {
+    font-size: 12px;
+  }
+}
+.popup-overlay {
+  width: 100%;
+  height: 100%;
+  display: fixed;
+  background: rgba(0, 0, 0, 0.4);
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+}
+
+.modal,
+.modal__about,
+.modal__services,
+.modal__contacts {
+  width: 300px;
+  height: 244px;
+  font-size: 14px;
+  display: block;
+  background: #fff;
+  z-index: 1000;
+}
+.modal__header,
+.modal__about__header,
+.modal__services__header,
+.modal__contacts__header {
+  width: 100%;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  background-color: #303030;
+  color: #cbcacb;
+  padding: 5px;
+}
+.modal__form,
+.modal__about__form,
+.modal__services__form,
+.modal__contacts__form {
+  padding: 20px;
+}
+.modal__form input,
+.modal__about__form input,
+.modal__services__form input,
+.modal__contacts__form input {
+  width: 100%;
+  margin-bottom: 20px;
+  height: 40px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  padding: 0 20px;
+}
+.modal__form input[type=submit],
+.modal__about__form input[type=submit],
+.modal__services__form input[type=submit],
+.modal__contacts__form input[type=submit] {
+  background: #FFC222;
+  color: #fff;
+  border: none;
+}
+.modal__form input[type=submit]:hover,
+.modal__about__form input[type=submit]:hover,
+.modal__services__form input[type=submit]:hover,
+.modal__contacts__form input[type=submit]:hover {
+  opacity: 0.5;
+}
+.modal a,
+.modal__about a,
+.modal__services a,
+.modal__contacts a {
+  text-decoration: none;
+  color: #000;
+}
+.modal > .content,
+.modal__about > .content,
+.modal__services > .content,
+.modal__contacts > .content {
+  width: 100%;
+  padding: 10px 10px;
+  font-family: "Roboto", sans-serif;
+}
+.modal > .close,
+.modal__about > .close,
+.modal__services > .close,
+.modal__contacts > .close {
+  cursor: pointer;
+  position: absolute;
+  display: block;
+  padding: 2px 5px;
+  line-height: 20px;
+  right: -10px;
+  top: -10px;
+  font-size: 24px;
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid #cfcece;
+}
+
+.modal__services {
+  height: auto;
+}
+.modal__services ul {
+  list-style: none;
+}
+
+.modal__contacts {
+  height: 200px;
+}
+
+.contacts__wrp {
+  margin-bottom: 15px;
+  text-align: center;
+}
+.contacts__link {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 25px;
+}
+.contacts__link .menu__telegram-img {
+  margin-right: 0;
+}
+
+@media screen and (max-width: 412px) {
+  .modal__about {
+    width: 270px;
+    height: 261px;
+  }
+
+  .modal__services {
+    width: 278px;
+  }
+
+  .modal__contacts {
+    width: 250px;
+  }
+}
+.header {
+  width: 100%;
+  background-color: #303030;
+}
+.header__top {
+  display: flex;
+  justify-content: space-between;
+  height: 45px;
+}
+.header__contacts {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+.header__phone {
+  display: flex;
+  margin-right: 20px;
+}
+.header__phone-img {
+  background: url("./img/phone.png");
+  width: 17px;
+  height: 17px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-right: 10px;
+}
+.header__phone-link {
+  color: #cbcacb;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.25px;
+  text-decoration: none;
+}
+.header__email {
+  display: flex;
+}
+.header__email-img {
+  background: url("./img/mail.png");
+  width: 17px;
+  height: 17px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-right: 10px;
+}
+.header__email-link {
+  color: #cbcacb;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.25px;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 620px) {
+  .header__top {
+    display: block;
+    height: 64px;
+    text-align: center;
+  }
+  .header__contacts {
+    height: 35px;
+    width: 350px;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 364px) {
+  .header__top {
+    height: 59px;
+  }
+  .header__contacts {
+    width: 280px;
+  }
+  .header__phone {
+    margin-right: 15px;
+  }
+  .header__phone-img, .header__email-img {
+    margin-right: 3px;
+  }
+  .header__phone-link, .header__email-link {
+    font-size: 11px;
+    margin-top: 4px;
+  }
+}
+.menu {
+  height: 45px;
+}
+.menu__box {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+.menu__socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu__telegram-img {
+  background: url("./img/telegram.png");
+  width: 25px;
+  height: 25px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-right: 30px;
+}
+.menu__viber-img {
+  background: url("./img/viber.png");
+  width: 25px;
+  height: 25px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.menu__viber-img:hover, .menu__telegram-img:hover {
+  opacity: 0.5;
+}
+.menu__btn {
+  display: none;
+}
+.menu__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.menu__list li {
+  display: block;
+}
+.menu__list button {
+  color: #FFC222;
+  font-size: 16px;
+  line-height: 40px;
+  border: 1px solid transparent;
+  padding: 0px 16px;
+  transition: all 0.3s;
+  background: #000;
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+.menu__list button:hover {
+  border-color: #cbcacb;
+}
+
+#page-wrap {
+  text-align: center;
+  overflow: auto;
+  top: 45%;
+  position: relative;
+}
+
+.bm-item {
+  display: inline-block;
+  text-decoration: none;
+  margin-bottom: 10px;
+  color: #d1d1d1;
+  transition: color 0.2s;
+}
+.bm-item:hover {
+  color: white;
+}
+
+.bm-burger-button {
+  position: relative;
+  width: 26px;
+  height: 20px;
+  float: right;
+  right: 10%;
+  margin-top: 13px;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #373a47;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #000;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 999 !important;
+}
+
+@media screen and (max-width: 412px) {
+  .menu__btn {
+    display: block;
+    font-size: 26px;
+  }
+  .menu ul {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-top: 15px;
+    z-index: 50;
+  }
+  .menu ul li {
+    width: 100vw;
+  }
+}
+.hero {
+  background: url("./img/f1.2.jpg");
+  width: 100%;
+  height: 600px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.slider {
+  text-align: center;
+  margin-top: 250px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.slider__title,
+.slider__text {
+  color: #cbcacb;
+}
+
+.slick-slider {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 150px;
+}/*# sourceMappingURL=style.css.map */
