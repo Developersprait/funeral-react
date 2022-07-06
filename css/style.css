@@ -406,10 +406,9 @@
   width: 80%;
   margin: 0 auto;
 }
-
-.slider__title,
-.slider__text {
+.slider__title, .slider__text {
   color: #cbcacb;
+  font-size: 2rem;
 }
 
 .slick-slider {
